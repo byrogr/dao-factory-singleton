@@ -12,7 +12,6 @@ public class IngenieroDaoMemory implements IngenieroDao {
     @Override
     public void create(Ingeniero ingeniero) {
         System.out.println("grabando datos en memoria");
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override

@@ -8,7 +8,7 @@ package cjava.ventanas;
 import cjava.daos.AdministradorDaoFactory;
 import cjava.entidades.Administrador;
 import cjava.servicios.AdministradorDao;
-import cjava.util.Constantes;
+import static cjava.util.TipoGrabado.*;
 
 /**
  *
@@ -123,7 +123,7 @@ public class PnlAdministrador extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
     AdministradorDaoFactory fabrica = AdministradorDaoFactory.getInstancia();
-    AdministradorDao dao = fabrica.getAdminitradorDao(Constantes.MEM);
+    AdministradorDao dao = fabrica.getAdminitradorDao(MEM);
     private void btnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarActionPerformed
         Administrador adm = new Administrador();
         

@@ -1,7 +1,8 @@
 package cjava.daos;
 
 import cjava.servicios.IngenieroDao;
-import static cjava.util.Constantes.*;
+import cjava.util.TipoGrabado;
+
 /**
  *
  * @author CJAVAPERU
@@ -13,7 +14,7 @@ public final class IngenieroDaoFactory {
     private IngenieroDaoFactory() {
     }
     
-    public static IngenieroDao getIngenieroDao( int tipo ) {
+    public static IngenieroDao getIngenieroDao( TipoGrabado tipo ) {
         IngenieroDao dao = null;
         switch(tipo) {
             case FIL: dao = new IngenieroDaoFile(); break;

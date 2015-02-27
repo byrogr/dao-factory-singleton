@@ -1,7 +1,7 @@
 package cjava.daos;
 
 import cjava.servicios.AdministradorDao;
-import static cjava.util.Constantes.*;
+import cjava.util.TipoGrabado;
 
 public final class AdministradorDaoFactory {
     
@@ -10,7 +10,7 @@ public final class AdministradorDaoFactory {
     private AdministradorDaoFactory(){
     }
     
-    public AdministradorDao getAdminitradorDao(int tipo){
+    public AdministradorDao getAdminitradorDao(TipoGrabado tipo){
         AdministradorDao dao=null;
         switch(tipo){
             case MEM:dao=new AdministradorDaoMemory();break;

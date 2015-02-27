@@ -3,7 +3,7 @@ package cjava.pruebas;
 import cjava.daos.IngenieroDaoFactory;
 import cjava.entidades.Ingeniero;
 import cjava.servicios.IngenieroDao;
-import cjava.util.Constantes;
+import static cjava.util.TipoGrabado.*;
 
 /**
  *
@@ -17,8 +17,7 @@ public class Prueba02 {
     public static void main(String[] args) {
         Ingeniero ing = new Ingeniero(1, 100, "Roger Rojas", 4000);
         IngenieroDaoFactory fabrica = IngenieroDaoFactory.getInstancia();
-        
-        IngenieroDao dao = fabrica.getIngenieroDao(Constantes.JDB);
+        IngenieroDao dao = fabrica.getIngenieroDao(MEM);
         dao.create(ing);
     }
     
